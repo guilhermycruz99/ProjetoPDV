@@ -26,7 +26,7 @@ public class Catalogo {
         return produtos.get(codigo);
     }
 
-    public void listarProduto() {
+    public void listarProdutos() {
         
         for (Produto produto : produtos.values()) {
             System.out.println(
