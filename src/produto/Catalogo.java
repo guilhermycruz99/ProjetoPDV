@@ -32,7 +32,7 @@ public class Catalogo {
             System.out.println(
                 produto.getCodigo() + " - " +
                 produto.getNome() + " - R$ " + 
-                produto.getPreco()
+                String.format("%.2f", produto.getPreco())
             );
         }
     }
