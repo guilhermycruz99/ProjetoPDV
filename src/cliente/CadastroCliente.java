@@ -10,12 +10,11 @@ public class CadastroCliente {
         clientes = new HashMap<>();
     }
 
-//Cadastro
+//Cadastro do cliente
     public void cadastrarCliente(Cliente cliente) {
-        clientes.put(cliente.getCpf(), cliente);
 
         if (clientes.containsKey(cliente.getCpf())) {
-            System.out.println("CPF cadastrado!!");
+            System.out.println("ERRO: CPF já cadastrado!!");
             return;
         } else {
             clientes.put(cliente.getCpf(), cliente);
@@ -23,7 +22,7 @@ public class CadastroCliente {
         }
     }
 
-//Listar todos os cadastros
+//Listar todos os clientes cadastrados
     public void listarClientes() {
 
         if (clientes.isEmpty()) {
@@ -46,6 +45,7 @@ public class CadastroCliente {
         if (clientes != null) {
             return cliente;
         } else {
+            System.out.println("CPF " + cpf + " não encontrado.");
             return null;
         }
     }
