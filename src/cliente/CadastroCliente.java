@@ -35,6 +35,8 @@ public class CadastroCliente {
             System.out.println("-----------------------------");
             System.out.println();
             }
+
+            System.out.println("----Todos os clientes cadastrados----");
         }
     }
 

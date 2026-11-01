@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import src.produto.Produto;
 
 public class Combo {
-    
+
     // atributos da classe
     private String codigo;
     private String nome;
@@ -17,11 +17,10 @@ public class Combo {
         this.nome = nome;
         this.preco = preco;
         this.produtos = new ArrayList<>();
-
     }
+
     // adicionar produtos
     public void adicionarProduto(Produto produto) {
-        
         if (produto == null) {
             
             System.out.print("Produto não encontrado.");
