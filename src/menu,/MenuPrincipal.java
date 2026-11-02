@@ -9,7 +9,7 @@ public class MenuPrincipal{
 
         while (opcao != 0) {
             System.out.println("\n=== CTRL+ALT+BUGUER ===");
-            System.out.printl("1 - produtos");
+            System.out.println("1 - produtos");
             System.out.println("2 - Estoque");
             System.out.println("3 - combos");
             System.out.println("4 - clientes");
