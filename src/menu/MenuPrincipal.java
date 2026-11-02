@@ -3,7 +3,7 @@ package src.menu;
 import java.util.Scanner;
 
 public class MenuPrincipal{
-    public void excutar() {
+    public void executar() {
         Scanner entrada = new Scanner(System.in);
         int opcao = -1;
 
