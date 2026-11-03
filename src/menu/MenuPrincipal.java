@@ -19,35 +19,27 @@ public class MenuPrincipal{
             System.out.print("Escolha uma opção:");
             opcao = entrada.nextInt();
 
-            switch (opcao) {
+            if (opcao == 1) {
+                System.out.println("Menu de Produtos");
 
-                case 1:
-                    System.out.println("Menu de Produtos");
-                    break;
+            }else if (opcao == 2){
+                System.out.println("Menu de Etoque");
+
+            }else if (opcao == 3){
+                System.out.println("Menu de Combos");
+
+            }else if (opcao == 4){
+                System.out.println("Menu de Cliente");
+
+            }else if (opcao == 5){
+                System.out.println("Menu de Relatórios");
+
+            }else if (opcao == 0){
+                System.out.println("Encerramdo o Sistema...");
+
+            }else {
+                System.out.println("opção inválida!");
                 
-                case 2:
-                    System.out.println("Menu de Estoque");  
-                    break;
-                    
-                case 3:
-                    System.out.println("Menu Combos");
-                    break;
-                    
-                case 4:
-                    System.out.println("Menu de cliente");
-                    break; 
-                    
-                case 5:
-                    System.out.println("Menu de relatórios");
-                    break;
-                    
-                case 0:
-                    System.out.println("Encerrando o Sistema...");
-                    break;
-                    
-                default:
-                    System.out.println("Opção inválida!");
-                    break;    
             }
         }
     }
