@@ -12,6 +12,7 @@ public class MenuPrincipal{
         catalogo.cadastrarProdutosIniciais();
 
         Estoque estoque = new Estoque();
+        estoque.cadastrarEstoque("001", 10);
 
         int opcao = -1;
 
@@ -35,7 +36,6 @@ public class MenuPrincipal{
                 String codigo = entrada.next();
 
                 int quantidade = estoque.consultarEstoque(codigo);
-
                 System.out.println("Quantidade em estoque: " + quantidade);
 
             }else if (opcao == 3){
