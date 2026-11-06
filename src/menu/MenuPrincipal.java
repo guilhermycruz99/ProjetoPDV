@@ -32,11 +32,42 @@ public class MenuPrincipal{
                 catalogo.listarProdutos();
 
             }else if (opcao == 2){
-                System.out.print("Digite o código do produto: ");
-                String codigo = entrada.next();
+                int opacaoEstoque = -1;
 
-                int quantidade = estoque.consultarEstoque(codigo);
-                System.out.println("Quantidade em estoque: " + quantidade);
+                while (opacaoEstoque !=0) {
+                    System.out.println("\n=== MENU DE ESTOQUE ===");
+                    System.out.println("1 - consultar estoque");
+                    System.out.println("2 - Cadastra estoque inicial");
+                    System.out.println("0 - voltar");
+                    System.out.print("Escolha uma opção: ");
+
+                    opacaoEstoque = entrada.nextInt();
+
+                    if (opacaoEstoque == 1) {
+                        System.out.print("Digite o código do produto: ");
+                        String codigo = entrada.next();
+
+                        int quantidade = estoque.consultarEstoque(codigo);
+                        System.out.println("Quantidade em estoque: " + quantidade);
+                    }
+
+                    else if (opacaoEstoque == 2){
+                        System.out.print("Digite o código do produto: ");
+                        String codigo = entrada.next();
+
+                        System.out.print("Digite a quantidade inicial: ");
+                        int quantidade = entrada.nextInt();
+
+                        estoque.cadastrarEstoque(codigo, quantidade);
+
+                        System.out.println("Operação de cadastro realizada.");
+                    }
+                    else if (opacaoEstoque == 0) {
+                        System.out.println("Voltando ao menu principal...");
+                    }else {
+                        System.out.println("opção invalida! Tente novamente.");
+                    }
+                }
 
             }else if (opcao == 3){
                 System.out.println("Menu de Combos");
