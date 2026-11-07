@@ -13,6 +13,15 @@ public class MenuPrincipal{
 
         Estoque estoque = new Estoque();
         estoque.cadastrarEstoque("001", 10);
+        estoque.cadastrarEstoque("002", 10);
+        estoque.cadastrarEstoque("003", 10);
+        estoque.cadastrarEstoque("004", 10);
+        estoque.cadastrarEstoque("005", 10);
+        estoque.cadastrarEstoque("006", 10);
+        estoque.cadastrarEstoque("007", 10);
+        estoque.cadastrarEstoque("008", 10);
+        estoque.cadastrarEstoque("009", 10);
+        estoque.cadastrarEstoque("010", 10);
 
         int opcao = -1;
 
