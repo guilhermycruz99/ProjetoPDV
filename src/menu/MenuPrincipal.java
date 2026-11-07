@@ -32,18 +32,18 @@ public class MenuPrincipal{
                 catalogo.listarProdutos();
 
             }else if (opcao == 2){
-                int opacaoEstoque = -1;
+                int opcaoEstoque = -1;
 
-                while (opacaoEstoque !=0) {
+                while (opcaoEstoque !=0) {
                     System.out.println("\n=== MENU DE ESTOQUE ===");
                     System.out.println("1 - consultar estoque");
                     System.out.println("2 - Cadastra estoque inicial");
                     System.out.println("0 - voltar");
                     System.out.print("Escolha uma opção: ");
 
-                    opacaoEstoque = entrada.nextInt();
+                    opcaoEstoque = entrada.nextInt();
 
-                    if (opacaoEstoque == 1) {
+                    if (opcaoEstoque == 1) {
                         System.out.print("Digite o código do produto: ");
                         String codigo = entrada.next();
 
@@ -51,7 +51,7 @@ public class MenuPrincipal{
                         System.out.println("Quantidade em estoque: " + quantidade);
                     }
 
-                    else if (opacaoEstoque == 2){
+                    else if (opcaoEstoque == 2){
                         System.out.print("Digite o código do produto: ");
                         String codigo = entrada.next();
 
@@ -62,7 +62,7 @@ public class MenuPrincipal{
 
                         System.out.println("Operação de cadastro realizada.");
                     }
-                    else if (opacaoEstoque == 0) {
+                    else if (opcaoEstoque == 0) {
                         System.out.println("Voltando ao menu principal...");
                     }else {
                         System.out.println("opção invalida! Tente novamente.");

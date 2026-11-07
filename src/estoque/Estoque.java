@@ -60,5 +60,5 @@ public class Estoque {
 
         quantidades.put(codigo, atual + quantidade);
     }
-    }
+}
 
