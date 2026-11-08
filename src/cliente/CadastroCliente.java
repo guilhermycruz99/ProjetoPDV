@@ -12,7 +12,6 @@ public class CadastroCliente {
 
 //Cadastro do cliente
     public void cadastrarCliente(Cliente cliente) {
-
         if (clientes.containsKey(cliente.getCpf())) {
             System.out.println("ERRO: CPF já cadastrado!!");
             return;
@@ -24,7 +23,6 @@ public class CadastroCliente {
 
 //Listar todos os clientes cadastrados
     public void listarClientes() {
-
         if (clientes.isEmpty()) {
             System.out.println("Nenhum cliente cadastrado!");
         } else {
@@ -35,7 +33,6 @@ public class CadastroCliente {
             System.out.println("-----------------------------");
             System.out.println();
             }
-
             System.out.println("----Todos os clientes cadastrados----");
         }
     }
@@ -44,7 +41,7 @@ public class CadastroCliente {
     public Cliente buscarClientes(String cpf) {
         Cliente cliente = clientes.get(cpf);
 
-        if (clientes != null) {
+        if (cliente != null) {
             return cliente;
         } else {
             System.out.println("CPF " + cpf + " não encontrado.");
