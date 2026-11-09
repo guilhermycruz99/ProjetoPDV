@@ -26,7 +26,7 @@ public class MenuPrincipal {
         estoque.cadastrarEstoque("009", 10);
         estoque.cadastrarEstoque("010", 10);
 
-        MenuEstoque menuEstoque = new MenuEstoque(estoque);
+        MenuEstoque menuEstoque = new MenuEstoque(estoque,catalogo);
 
         int opcao = -1;
 
