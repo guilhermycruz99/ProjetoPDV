@@ -6,10 +6,17 @@ import java.util.Scanner;
 
 public class MenuEstoque {
 
+    private Estoque estoque;
+
+    public MenuEstoque(Estoque estoque) {
+        this.estoque = estoque;
+    }
+
     public void executar() {
         Scanner entrada = new Scanner(System.in);
 
-        Estoque estoque = new Estoque();
+
+        int opcaoEstoque = -1;
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);
@@ -22,12 +29,12 @@ public class MenuEstoque {
         estoque.cadastrarEstoque("009", 10);
         estoque.cadastrarEstoque("010", 10);
 
-        int opcaoEstoque = -1;
 
         while (opcaoEstoque != 0) {
             System.out.println("\n=== MENU DE ESTOQUE ===");
             System.out.println("1 - consultar estoque");
             System.out.println("2 - Cadastra estoque inicial");
+            System.out.println("3 - Adicinar estoque");
             System.out.println("0 - voltar");
             System.out.print("Escolha uma opção: ");
 
@@ -49,6 +56,17 @@ public class MenuEstoque {
 
                 estoque.cadastrarEstoque(codigo, quantidade);
                 System.out.println("Operação de cadastro realizada.");
+
+            } else if (opcaoEstoque == 3){
+                System.out.print("Digite o código do produto: ");
+                String codigo = entrada.next();
+
+                System.out.print("Digite a quantidade que deseja adicionar: ");
+                int quantidade = entrada.nextInt();
+
+                estoque.adicionarEstoque(codigo, quantidade);
+
+                System.out.println("operação realizada. ");
 
             } else if (opcaoEstoque == 0) {
                 System.out.println("Voltando ao menu principal...");

@@ -1,6 +1,7 @@
 
 package src.menu;
 
+import src.estoque.Estoque;
 import src.produto.Catalogo;
 import java.util.Scanner;
 
@@ -12,7 +13,20 @@ public class MenuPrincipal {
         Catalogo catalogo = new Catalogo();
         catalogo.cadastrarProdutosIniciais();
 
-        MenuEstoque menuEstoque = new MenuEstoque();
+        Estoque estoque = new Estoque();
+
+        estoque.cadastrarEstoque("001", 10);
+        estoque.cadastrarEstoque("002", 10);
+        estoque.cadastrarEstoque("003", 10);
+        estoque.cadastrarEstoque("004", 10);
+        estoque.cadastrarEstoque("005", 10);
+        estoque.cadastrarEstoque("006", 10);
+        estoque.cadastrarEstoque("007", 10);
+        estoque.cadastrarEstoque("008", 10);
+        estoque.cadastrarEstoque("009", 10);
+        estoque.cadastrarEstoque("010", 10);
+
+        MenuEstoque menuEstoque = new MenuEstoque(estoque);
 
         int opcao = -1;
 
