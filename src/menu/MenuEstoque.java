@@ -50,12 +50,25 @@ public class MenuEstoque {
                 System.out.print("Digite o código do produto: ");
                 String codigo = entrada.next();
 
-                System.out.print("Digite a quantidade inicial: ");
-                int quantidade = entrada.nextInt();
+                Produto produto = catalogo.buscarProduto(codigo);
 
-                estoque.cadastrarEstoque(codigo, quantidade);
-                System.out.println("Operação de cadastro realizada.");
+                if (produto == null){
+                    System.out.println("Produto não encontrado!");
+                }else {
+                    System.out.print("Digite a quantidade inicial:");
+                    int quantidade = entrada.nextInt();
 
+                    if (quantidade < 0){
+                        System.out.println("Quantidade invalida!");
+
+
+                    }else if (estoque.consultarEstoque(codigo) > 0) {
+                        System.out.println("Este produto já possui estoque cadastrado!");
+
+                    }else{
+                        estoque.cadastrarEstoque(codigo, quantidade);
+                    }
+                }
             } else if (opcaoEstoque == 3){
                 System.out.print("Digite o código do produto: ");
                 String codigo = entrada.next();
