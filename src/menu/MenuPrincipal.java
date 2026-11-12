@@ -3,6 +3,8 @@ package src.menu;
 
 import src.estoque.Estoque;
 import src.produto.Catalogo;
+import src.cliente.CadastroCliente;
+import src.menu.MenuCliente;
 import java.util.Scanner;
 
 public class MenuPrincipal {
@@ -14,6 +16,10 @@ public class MenuPrincipal {
         catalogo.cadastrarProdutosIniciais();
 
         Estoque estoque = new Estoque();
+
+        CadastroCliente cadastroCliente = new CadastroCliente();
+        MenuCliente menuCliente = new
+        MenuCliente(cadastroCliente);
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);
@@ -52,7 +58,7 @@ public class MenuPrincipal {
                 System.out.println("Menu de Combos");
 
             } else if (opcao == 4) {
-                System.out.println("Menu de Cliente");
+                menuCliente.executar();;
 
             } else if (opcao == 5) {
                 System.out.println("Menu de Relatórios");
