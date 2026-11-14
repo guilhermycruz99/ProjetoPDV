@@ -27,6 +27,8 @@ public class CadastroVendedor {
         if (vendedores.isEmpty()) {
             System.out.println("Nenhum vendedor cadastrado!");
         } else {
+            System.out.println("----Todos os vendedores cadastrados----");
+
             for (Vendedor vendedor : vendedores.values()) {
             System.out.println("Nome: " + vendedor.getNome());
             System.out.println("Código: " + vendedor.getCodigo());
@@ -34,7 +36,6 @@ public class CadastroVendedor {
             System.out.println("-----------------------------");
             System.out.println();
             }
-            System.out.println("----Todos os vendedores cadastrados----");
         }
     }
 

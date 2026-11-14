@@ -5,6 +5,7 @@ import src.estoque.Estoque;
 import src.produto.Catalogo;
 import src.cliente.CadastroCliente;
 import src.menu.MenuCliente;
+import src.vendedor.CadastroVendedor;
 import java.util.Scanner;
 
 public class MenuPrincipal {
@@ -20,6 +21,12 @@ public class MenuPrincipal {
         CadastroCliente cadastroCliente = new CadastroCliente();
         MenuCliente menuCliente = new
         MenuCliente(cadastroCliente);
+
+        CadastroVendedor cadastroVendedor = new 
+        CadastroVendedor();
+
+        MenuVendedor menuVendedor = new 
+        MenuVendedor(cadastroVendedor);
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);
@@ -42,7 +49,8 @@ public class MenuPrincipal {
             System.out.println("2 - Estoque");
             System.out.println("3 - combos");
             System.out.println("4 - clientes");
-            System.out.println("5 - relatorio");
+            System.out.println("5 - vendedor");
+            System.out.println("6 - relatorio");
             System.out.println("0 - sair");
             System.out.print("Escolha uma opção:");
 
@@ -60,7 +68,9 @@ public class MenuPrincipal {
             } else if (opcao == 4) {
                 menuCliente.executar();;
 
-            } else if (opcao == 5) {
+            }else if (opcao == 5){
+                menuVendedor.executar();
+            }else if (opcao == 6) {
                 System.out.println("Menu de Relatórios");
 
             } else if (opcao == 0) {
