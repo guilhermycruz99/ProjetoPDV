@@ -47,10 +47,9 @@ public class MenuPrincipal {
             System.out.println("\n=== CTRL+ALT+BUGUER ===");
             System.out.println("1 - produtos");
             System.out.println("2 - Estoque");
-            System.out.println("3 - combos");
-            System.out.println("4 - clientes");
-            System.out.println("5 - vendedor");
-            System.out.println("6 - relatorio");
+            System.out.println("3 - clientes");
+            System.out.println("4 - vendedor");
+            System.out.println("5 - relatorio");
             System.out.println("0 - sair");
             System.out.print("Escolha uma opção:");
 
@@ -62,15 +61,12 @@ public class MenuPrincipal {
             } else if (opcao == 2) {
                 menuEstoque.executar();
 
-            } else if (opcao == 3) {
-                System.out.println("Menu de Combos");
-
-            } else if (opcao == 4) {
+            }else if (opcao == 3) {
                 menuCliente.executar();;
 
-            }else if (opcao == 5){
+            }else if (opcao == 4){
                 menuVendedor.executar();
-            }else if (opcao == 6) {
+            }else if (opcao == 5) {
                 System.out.println("Menu de Relatórios");
 
             } else if (opcao == 0) {
