@@ -66,6 +66,7 @@ public class MenuPrincipal {
 
             }else if (opcao == 4){
                 menuVendedor.executar();
+                
             }else if (opcao == 5) {
                 System.out.println("Menu de Relatórios");
 
