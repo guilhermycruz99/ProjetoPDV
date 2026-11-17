@@ -1,6 +1,7 @@
 
 package src.menu;
 
+import src.menu.MenuProduto;
 import src.estoque.Estoque;
 import src.produto.Catalogo;
 import src.cliente.CadastroCliente;
@@ -15,6 +16,8 @@ public class MenuPrincipal {
 
         Catalogo catalogo = new Catalogo();
         catalogo.cadastrarProdutosIniciais();
+
+        MenuProduto menuProduto = new MenuProduto(catalogo);
 
         Estoque estoque = new Estoque();
 
@@ -56,7 +59,7 @@ public class MenuPrincipal {
             opcao = entrada.nextInt();
 
             if (opcao == 1) {
-                catalogo.listarProdutos();
+                menuProduto.executar();
 
             } else if (opcao == 2) {
                 menuEstoque.executar();

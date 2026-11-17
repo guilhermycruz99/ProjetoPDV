@@ -27,11 +27,47 @@ public class MenuProduto {
             opcaoProduto= entrada.nextInt();
             
             if(opcaoProduto == 1){
-                System.out.println("Cadastrar Produto");
+                
+                entrada.nextLine();
+                System.out.print("Digite o código do produto: ");
+                String codigo = entrada.nextLine();
+
+                System.out.print("Digite o nome do produto: ");
+                String nome = entrada.nextLine();
+
+                System.out.print("Digite o preço do produto: ");
+                double preco = entrada.nextDouble();
+
+                entrada.nextLine();
+
+                System.out.print("Digite a categoria do produto: ");
+                String categoria = entrada.nextLine();
+
+                Produto produto = new Produto(codigo, nome, preco, categoria);
+
+                catalogo.cadastrarProduto(produto);
+                
             } else if (opcaoProduto == 2){
-                System.out.println("Buscar Produto");
+                
+                entrada.nextLine();
+
+                System.out.print("Digite o código do produto: ");
+                String codigo = entrada.nextLine();
+
+                Produto produto = catalogo.buscarProduto(codigo);
+
+                if (produto != null) {
+                    System.out.println("Produto encontrado!");
+                    System.out.println("Código: " + produto.getCodigo());
+                    System.out.println("Nome: " + produto.getNome());
+                    System.out.println("Preço: R$" + produto.getPreco());
+                    System.out.println("Categoria: " + produto.getCategoria());
+
+                } else {
+                    System.out.println("Produto não encontrado!");
+                }
             } else if (opcaoProduto == 3){
-                System.out.println("Listar Produtos");
+                catalogo.listarProdutos();
             } else if (opcaoProduto == 0){
                 System.out.println("Voltando ao menu principal...");
             } else {
