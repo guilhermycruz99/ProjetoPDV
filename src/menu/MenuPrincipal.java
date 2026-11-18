@@ -55,7 +55,7 @@ public class MenuPrincipal {
             System.out.println(" 5 - Relatório Geral");
             System.out.println(" 6 - Realizar venda");
             System.out.println(" 0 - Sair\n");
-            System.out.print("Escolha uma opção:");
+            System.out.print("Escolha uma opção: ");
             opcao = entrada.nextInt();
             System.out.println("---------------------------");
 

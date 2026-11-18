@@ -19,11 +19,12 @@ public class MenuVendedor {
 
         while (opcaoVendedor != 0) {
             System.out.println("\n-----  MENU DE VENDEDORES -----\n");
-            System.out.println("1 - Cadastrar vendedor");
-            System.out.println("2 - Buscar vendedor");
-            System.out.println("3 - Listar vendedores");
-            System.out.println("0 - Voltar");
+            System.out.println(" 1 - Cadastrar vendedor");
+            System.out.println(" 2 - Buscar vendedor");
+            System.out.println(" 3 - Listar vendedores");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
+            System.out.println("----------------------------");
             
             opcaoVendedor = entrada.nextInt();
 

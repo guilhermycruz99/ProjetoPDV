@@ -23,14 +23,14 @@ public class MenuEstoque {
         
 
         while (opcaoEstoque != 0) {
-            System.out.println("\n----- MENU DE ESTOQUE -----");
+            System.out.println("\n----- MENU DE ESTOQUE -----\n");
             System.out.println(" 1 - Consultar estoque");
             System.out.println(" 2 - Cadastra estoque inicial");
             System.out.println(" 3 - Adicionar estoque");
-            System.out.println(" 0 - Voltar");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
             opcaoEstoque = entrada.nextInt();
-            System.out.println("\n---------------------------");
+            System.out.println("---------------------------");
 
             if (opcaoEstoque == 1) {
                 System.out.print("Digite o código do produto: ");

@@ -18,15 +18,14 @@ public class MenuCliente {
         int opcaoCliente = -1;
 
         while (opcaoCliente != 0) {
-            System.out.println("\n----- MENU DE CLIENTE -----");
+            System.out.println("\n----- MENU DE CLIENTE -----\n");
             System.out.println(" 1 - Casdastrar cliente");
             System.out.println(" 2 - Buscar cliente");
             System.out.println(" 3 - Listar clientes");
             System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
-            System.out.println("---------------------------");;
-
             opcaoCliente = entrada.nextInt();
+            System.out.println("---------------------------");
 
             if (opcaoCliente == 1) {
                 entrada.nextLine();

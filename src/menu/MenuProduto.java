@@ -21,10 +21,10 @@ public class MenuProduto {
 
         while (opcaoProduto != 0) {
             System.out.println("\n----- MENU DE PRODUTOS -----\n");
-            System.out.println("1 - Cadastrar Produto");
-            System.out.println("2 - Buscar Produto");
-            System.out.println("3 - Listar produto");
-            System.out.println("0 - Voltar\n");
+            System.out.println(" 1 - Cadastrar Produto");
+            System.out.println(" 2 - Buscar Produto");
+            System.out.println(" 3 - Listar produto");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
             opcaoProduto= entrada.nextInt();
             System.out.println("----------------------------");
