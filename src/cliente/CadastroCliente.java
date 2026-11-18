@@ -8,6 +8,11 @@ public class CadastroCliente {
 
     public CadastroCliente() {
         clientes = new HashMap<>();
+
+        //Clientes pré cadastrados
+        cadastrarCliente(new Cliente ("Denzel Franco", "44477733301", "8397776864"));
+        cadastrarCliente(new Cliente ("Guilhermy Phyllipe", "99900044407", "83974556464"));
+        cadastrarCliente(new Cliente ("Juan Diêgo", "55566655509", "83974543591"));
     }
 
 //Cadastro do cliente
