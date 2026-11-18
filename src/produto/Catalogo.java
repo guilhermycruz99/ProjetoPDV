@@ -7,7 +7,6 @@ public class Catalogo {
 
     public Catalogo() {
         produtos = new HashMap<>();
-
     }
 
     public void cadastrarProduto(Produto produto) {
@@ -27,13 +26,14 @@ public class Catalogo {
     }
 
     public void listarProdutos() {
-        
+        System.out.println();
         for (Produto produto : produtos.values()) {
             System.out.println(
                 produto.getCodigo() + " - " +
                 produto.getNome() + " - R$ " + 
                 String.format("%.2f", produto.getPreco())
             );
+            System.out.println();
         }
     }
 
@@ -50,8 +50,5 @@ public class Catalogo {
         cadastrarProduto(new Produto("008", "Coca-Cola 350ml", 6.00, "Bebida"));
         cadastrarProduto(new Produto("009", "Guaraná Antarctica 350ml", 5.50, "Bebida"));
         cadastrarProduto(new Produto("010", "Água mineral 500ml", 3.50, "Bebida"));
-
-        cadastrarProduto(new Produto("011", "Ctrl+Fome", 31.00, "Combo"));
-        cadastrarProduto(new Produto("012", "Combo Boss Final", 49.90, "Combo"));
-    }
+        }
 }

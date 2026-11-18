@@ -18,12 +18,13 @@ public class MenuCliente {
         int opcaoCliente = -1;
 
         while (opcaoCliente != 0) {
-            System.out.println("\n=== MENU DE CLIENTE ===");
-            System.out.println("1 - Casdastrar cliente");
-            System.out.println("2 - Busca cliente");
-            System.out.println("3 - Listar clientes");
-            System.out.println("0 - Voltar");
+            System.out.println("\n----- MENU DE CLIENTE -----");
+            System.out.println(" 1 - Casdastrar cliente");
+            System.out.println(" 2 - Buscar cliente");
+            System.out.println(" 3 - Listar clientes");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
+            System.out.println("---------------------------");;
 
             opcaoCliente = entrada.nextInt();
 
@@ -56,16 +57,16 @@ public class MenuCliente {
                     System.out.println("Nome: " + cliente.getNome());
                     System.out.println("cpf: " + cliente.getCpf());
                     System.out.println("Telefone: " + cliente.getTel());
-
                 }
+
             } else if (opcaoCliente == 3) {
                 cadastroCliente.listarClientes();
+
             } else if (opcaoCliente == 0) {
                 System.out.println("Voltando ao menu principal...");
             }else {
                 System.out.println("opção invalida!");
             }
-            
         }
     }
     

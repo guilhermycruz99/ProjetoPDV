@@ -47,16 +47,17 @@ public class MenuPrincipal {
         int opcao = -1;
 
         while (opcao != 0) {
-            System.out.println("\n=== CTRL+ALT+BUGUER ===");
-            System.out.println("1 - produtos");
-            System.out.println("2 - Estoque");
-            System.out.println("3 - clientes");
-            System.out.println("4 - vendedor");
-            System.out.println("5 - relatorio");
-            System.out.println("0 - sair");
+            System.out.println("\n----- CTRL+ALT+BUGUER -----\n");
+            System.out.println(" 1 - Gerenciar produtos");
+            System.out.println(" 2 - Gerenciar estoque");
+            System.out.println(" 3 - Gerenciar clientes");
+            System.out.println(" 4 - Gerenciar vendedor");
+            System.out.println(" 5 - Relatório Geral");
+            System.out.println(" 6 - Realizar venda");
+            System.out.println(" 0 - Sair\n");
             System.out.print("Escolha uma opção:");
-
             opcao = entrada.nextInt();
+            System.out.println("---------------------------");
 
             if (opcao == 1) {
                 menuProduto.executar();
@@ -72,7 +73,8 @@ public class MenuPrincipal {
                 
             }else if (opcao == 5) {
                 System.out.println("Menu de Relatórios");
-
+            }else if (opcao == 6) {
+                System.out.println("Menu de Vendas");
             } else if (opcao == 0) {
                 System.out.println("Encerramdo o Sistema...");
 
