@@ -2,13 +2,17 @@ package src.vendedor;
 
 import java.util.HashMap;
 
-
 public class CadastroVendedor {
     private HashMap<String, Vendedor> vendedores;
 
 //Mapa de vendedores
     public CadastroVendedor() {
         vendedores = new HashMap<>();
+
+        //Vendedores pré cadastrados
+        cadastrarVendedor(new Vendedor ("João Victor", "001", "83999990000"));
+        cadastrarVendedor(new Vendedor ("Jackie Chan", "002", "83988889999"));
+        cadastrarVendedor(new Vendedor ("Paulo Islan", "003", "8340028922"));
     }
 
 //Cadastro do vendedor

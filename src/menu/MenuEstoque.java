@@ -23,14 +23,14 @@ public class MenuEstoque {
         
 
         while (opcaoEstoque != 0) {
-            System.out.println("\n=== MENU DE ESTOQUE ===");
-            System.out.println("1 - consultar estoque");
-            System.out.println("2 - Cadastra estoque inicial");
-            System.out.println("3 - Adicinar estoque");
-            System.out.println("0 - voltar");
+            System.out.println("\n----- MENU DE ESTOQUE -----\n");
+            System.out.println(" 1 - Consultar estoque");
+            System.out.println(" 2 - Cadastra estoque inicial");
+            System.out.println(" 3 - Adicionar estoque");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
-
             opcaoEstoque = entrada.nextInt();
+            System.out.println("---------------------------");
 
             if (opcaoEstoque == 1) {
                 System.out.print("Digite o código do produto: ");
@@ -78,15 +78,15 @@ public class MenuEstoque {
                 if (produto == null) {
                     System.out.println("Produto não encontrado!");
                 }else{
-                    System.out.print("Digite a quantidade que deseja adicinor: ");
+                    System.out.print("Digite a quantidade que deseja adicionar: ");
                     int quantidade = entrada.nextInt();
 
-                    if (quantidade <=0){
+                    if (quantidade <= 0){
                         System.out.println("Digite uma quantidade maior que zero!");
                     } else {
                         estoque.adicionarEstoque(codigo, quantidade);
 
-                        System.out.println("Estoque atualiza com sucesso!");
+                        System.out.println("Estoque atualizado com sucesso!");
                     }
                 }
             } else if (opcaoEstoque == 0) {

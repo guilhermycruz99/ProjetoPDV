@@ -18,33 +18,30 @@ public class MenuVendedor {
         int opcaoVendedor = -1;
 
         while (opcaoVendedor != 0) {
-            System.out.println("\n===  MENU DE VENDEDORES ===");
-            System.out.println("1 - Cadastra vendedor");
-            System.out.println("2 - Buscar vendedor");
-            System.out.println("3 - listar vendedores");
-            System.out.println("0 - Voltar");
+            System.out.println("\n-----  MENU DE VENDEDORES -----\n");
+            System.out.println(" 1 - Cadastrar vendedor");
+            System.out.println(" 2 - Buscar vendedor");
+            System.out.println(" 3 - Listar vendedores");
+            System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
+            System.out.println("----------------------------");
             
             opcaoVendedor = entrada.nextInt();
 
             if (opcaoVendedor == 1){
                 entrada.nextLine();
-
                 System.out.print("Digite o nome do vendedor: ");
                 String nome = entrada.nextLine();
-
-                System.out.print("Digite o Código do vendedor: ");
+                System.out.print("Digite o código do vendedor: ");
                 String codigo = entrada.nextLine();
-
                 System.out.print("Digite o telefone: ");
                 String telefone = entrada.nextLine();
 
                 Vendedor vendedor = new Vendedor(nome, codigo, telefone);
-
                 cadastroVendedor.cadastrarVendedor(vendedor);
+
             } else if (opcaoVendedor == 2){
                 entrada.nextLine();
-
                 System.out.print("Digite o código do vendedor: ");
                 String codigo = entrada.nextLine();
 
@@ -58,6 +55,7 @@ public class MenuVendedor {
                 }
             } else if (opcaoVendedor == 3){
                 cadastroVendedor.listarVendedores();
+                System.out.println("\n---------------------------");
             } else if (opcaoVendedor == 0){
                 System.out.println("Voltando ao menu principal...");
             } else {
