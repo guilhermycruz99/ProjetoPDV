@@ -19,6 +19,8 @@ public class MenuPrincipal {
 
         MenuProduto menuProduto = new MenuProduto(catalogo);
 
+        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo);
+
         Estoque estoque = new Estoque();
 
         CadastroCliente cadastroCliente = new CadastroCliente();
@@ -71,7 +73,7 @@ public class MenuPrincipal {
                 menuVendedor.executar();
                 
             }else if (opcao == 5) {
-                System.out.println("Menu de Relatórios");
+                menuRelatorio.executar();
 
             } else if (opcao == 0) {
                 System.out.println("Encerramdo o Sistema...");
