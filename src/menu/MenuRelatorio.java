@@ -1,14 +1,17 @@
 package src.menu;
 import  java.util.Scanner;
 import  src.produto.Catalogo;
+import  src.estoque.Estoque;
 
 
 public class MenuRelatorio {
 
     private Catalogo catalogo;
+    private Estoque estoque;
 
-    public MenuRelatorio(Catalogo catalogo){
+    public MenuRelatorio(Catalogo catalogo, Estoque estoque){
         this.catalogo = catalogo;
+        this.estoque = estoque;
     }
 
     public void executar() {
