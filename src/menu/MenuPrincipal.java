@@ -1,13 +1,16 @@
 
 package src.menu;
 
+import java.util.Scanner;
+import src.produto.Catalogo;
 import src.menu.MenuProduto;
 import src.estoque.Estoque;
-import src.produto.Catalogo;
+import src.menu.MenuEstoque;
 import src.cliente.CadastroCliente;
 import src.menu.MenuCliente;
 import src.vendedor.CadastroVendedor;
-import java.util.Scanner;
+import src.menu.MenuVendedor;
+import src.menu.MenuRelatorio;
 
 public class MenuPrincipal {
 
@@ -21,17 +24,13 @@ public class MenuPrincipal {
 
         Estoque estoque = new Estoque();
 
-        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque);
-
         CadastroCliente cadastroCliente = new CadastroCliente();
-        MenuCliente menuCliente = new
-        MenuCliente(cadastroCliente);
+        MenuCliente menuCliente = new MenuCliente(cadastroCliente);
 
-        CadastroVendedor cadastroVendedor = new 
-        CadastroVendedor();
+        CadastroVendedor cadastroVendedor = new CadastroVendedor();
+        MenuVendedor menuVendedor = new MenuVendedor(cadastroVendedor);
 
-        MenuVendedor menuVendedor = new 
-        MenuVendedor(cadastroVendedor);
+        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque, cadastroCliente, cadastroVendedor);
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);

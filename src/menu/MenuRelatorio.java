@@ -2,18 +2,23 @@ package src.menu;
 import  java.util.Scanner;
 import  src.produto.Catalogo;
 import  src.produto.Produto;
+import  src.cliente.CadastroCliente;
 import  src.estoque.Estoque;
-import  src.produto.Produto;
+import  src.vendedor.CadastroVendedor;
 
 
 public class MenuRelatorio {
 
     private Catalogo catalogo;
     private Estoque estoque;
+    private CadastroCliente cadastroCliente;
+    private CadastroVendedor cadastroVendedor;
 
-    public MenuRelatorio(Catalogo catalogo, Estoque estoque){
+    public MenuRelatorio(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor){
         this.catalogo = catalogo;
         this.estoque = estoque;
+        this.cadastroCliente = cadastroCliente;
+        this.cadastroVendedor = cadastroVendedor;
     }
 
     public void executar() {
@@ -52,10 +57,12 @@ public class MenuRelatorio {
                 }
 
             } else if (opcaoRelatorio == 3) {
-                System.out.println("Relatório de clientes");
+                System.out.println("\n=== RELATÓRIO DE CLIENTES===");
+                cadastroCliente.listarClientes();
 
             } else if (opcaoRelatorio == 4) {
-                System.out.println("Relatório de vendedores");
+                System.out.println("\n=== RELATÓRIO DE VENDEDORES===");
+                cadastroVendedor.listarVendedores();
 
             } else if (opcaoRelatorio == 0) {
                 System.out.println("Voltando ao menu principal...");
