@@ -25,6 +25,10 @@ public class Catalogo {
         return produtos.get(codigo);
     }
 
+    public HashMap<String,Produto> getProdutos(){
+        return produtos;
+    }
+
     public void listarProdutos() {
         System.out.println();
         for (Produto produto : produtos.values()) {

@@ -19,9 +19,9 @@ public class MenuPrincipal {
 
         MenuProduto menuProduto = new MenuProduto(catalogo);
 
-        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo);
-
         Estoque estoque = new Estoque();
+
+        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque);
 
         CadastroCliente cadastroCliente = new CadastroCliente();
         MenuCliente menuCliente = new

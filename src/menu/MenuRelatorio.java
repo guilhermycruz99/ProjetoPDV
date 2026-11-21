@@ -1,7 +1,9 @@
 package src.menu;
 import  java.util.Scanner;
 import  src.produto.Catalogo;
+import  src.produto.Produto;
 import  src.estoque.Estoque;
+import  src.produto.Produto;
 
 
 public class MenuRelatorio {
@@ -37,7 +39,17 @@ public class MenuRelatorio {
                 catalogo.listarProdutos();
 
             } else if (opcaoRelatorio == 2) {
-                System.out.println("Relatório de estoque");
+                System.out.println("\n=== RELATÓRIO DE ESTOQUE===");
+
+                for (Produto produto : catalogo.getProdutos().values()){
+
+                    int quantidade = estoque.consultarEstoque(produto.getCodigo());
+                    
+                    System.out.println("Produto" + produto.getNome());
+                                        
+                    System.out.println("Quantidade em estoque:" + quantidade);
+
+                }
 
             } else if (opcaoRelatorio == 3) {
                 System.out.println("Relatório de clientes");
