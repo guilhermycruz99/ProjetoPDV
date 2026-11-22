@@ -11,6 +11,7 @@ import src.menu.MenuCliente;
 import src.vendedor.CadastroVendedor;
 import src.menu.MenuVendedor;
 import src.menu.MenuRelatorio;
+import src.venda.MenuVenda;
 
 public class MenuPrincipal {
 
@@ -31,6 +32,8 @@ public class MenuPrincipal {
         MenuVendedor menuVendedor = new MenuVendedor(cadastroVendedor);
 
         MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque, cadastroCliente, cadastroVendedor);
+
+        MenuVenda menuVenda = new MenuVenda(catalogo, estoque, cadastroCliente, cadastroVendedor);
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);
@@ -76,7 +79,7 @@ public class MenuPrincipal {
                 menuRelatorio.executar();
 
             } else if (opcao == 6) {
-                System.out.println("Menu de Vendas");
+                menuVenda.executar();
 
             } else if (opcao == 0) {
                 System.out.println("Encerramdo o Sistema...");
