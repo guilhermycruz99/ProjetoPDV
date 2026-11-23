@@ -72,5 +72,6 @@ public class MenuProduto {
                 System.out.println("opção invalida!");
             }
         }
+        entrada.close();
     }
 }

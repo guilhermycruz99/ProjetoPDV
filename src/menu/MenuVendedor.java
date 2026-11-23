@@ -62,6 +62,7 @@ public class MenuVendedor {
                 System.out.println("opção inválida!");
             }
         }
+        entrada.close();
     }
     
 }

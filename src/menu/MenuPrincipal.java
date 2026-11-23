@@ -69,10 +69,10 @@ public class MenuPrincipal {
             } else if (opcao == 2) {
                 menuEstoque.executar();
 
-            }else if (opcao == 3) {
-                menuCliente.executar();;
+            } else if (opcao == 3) {
+                menuCliente.executar();
 
-            }else if (opcao == 4){
+            } else if (opcao == 4){
                 menuVendedor.executar();
                 
             } else if (opcao == 5){
@@ -82,11 +82,12 @@ public class MenuPrincipal {
                 menuVenda.executar();
 
             } else if (opcao == 0) {
-                System.out.println("Encerramdo o Sistema...");
+                System.out.println("Encerrando o Sistema...");
 
             } else {
                 System.out.println("opção inválida!");
             }
         }
+        entrada.close();
     }
 }

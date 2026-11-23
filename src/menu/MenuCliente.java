@@ -67,6 +67,7 @@ public class MenuCliente {
                 System.out.println("opção invalida!");
             }
         }
+        entrada.close();
     }
-    
+
 }

@@ -96,5 +96,6 @@ public class MenuEstoque {
                 System.out.println("opção invalida! Tente novamente.");
             }
         }
+        entrada.close();
     }
 }
