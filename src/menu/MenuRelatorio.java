@@ -72,7 +72,6 @@ public class MenuRelatorio {
             }  
             
         }
-        entrada.close();
     }
     
 }

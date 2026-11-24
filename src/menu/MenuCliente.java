@@ -7,19 +7,20 @@ import java.util.Scanner;
 public class MenuCliente {
 
     private CadastroCliente cadastroCliente;
+    private Scanner entrada;
 
-    public MenuCliente(CadastroCliente cadastroCliente){
+    public MenuCliente(CadastroCliente cadastroCliente, Scanner entrada){
         this.cadastroCliente = cadastroCliente;
+        this.entrada = entrada;
     }
 
     public void executar(){
-        Scanner entrada = new Scanner(System.in);
 
         int opcaoCliente = -1;
 
         while (opcaoCliente != 0) {
             System.out.println("\n----- MENU DE CLIENTE -----\n");
-            System.out.println(" 1 - Casdastrar cliente");
+            System.out.println(" 1 - Cadastrar cliente");
             System.out.println(" 2 - Buscar cliente");
             System.out.println(" 3 - Listar clientes");
             System.out.println(" 0 - Voltar\n");
@@ -67,7 +68,6 @@ public class MenuCliente {
                 System.out.println("opção invalida!");
             }
         }
-        entrada.close();
     }
 
 }

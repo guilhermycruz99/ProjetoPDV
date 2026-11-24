@@ -9,13 +9,14 @@ import java.util.Scanner;
 public class MenuProduto {
 
     private Catalogo catalogo;
+    private Scanner entrada;
 
-    public  MenuProduto(Catalogo catalogo) {
+    public  MenuProduto(Catalogo catalogo, Scanner entrada) {
         this.catalogo = catalogo;
+        this.entrada = entrada;
     }
 
     public void executar(){
-        Scanner entrada = new Scanner(System.in);
         
         int opcaoProduto = -1;
 
@@ -72,6 +73,5 @@ public class MenuProduto {
                 System.out.println("opção invalida!");
             }
         }
-        entrada.close();
     }
 }

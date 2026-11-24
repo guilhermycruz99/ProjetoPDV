@@ -9,15 +9,15 @@ public class MenuEstoque {
 
     private Estoque estoque;
     private Catalogo catalogo;
+    private Scanner entrada;
 
-    public MenuEstoque(Estoque estoque, Catalogo catalogo) {
+    public MenuEstoque(Estoque estoque, Catalogo catalogo, Scanner entrada) {
         this.estoque = estoque;
         this.catalogo = catalogo;
+        this.entrada = entrada;
     }
 
     public void executar() {
-        Scanner entrada = new Scanner(System.in);
-
 
         int opcaoEstoque = -1;
         
@@ -96,6 +96,5 @@ public class MenuEstoque {
                 System.out.println("opção invalida! Tente novamente.");
             }
         }
-        entrada.close();
     }
 }

@@ -3,14 +3,9 @@ package src.menu;
 
 import java.util.Scanner;
 import src.produto.Catalogo;
-import src.menu.MenuProduto;
 import src.estoque.Estoque;
-import src.menu.MenuEstoque;
 import src.cliente.CadastroCliente;
-import src.menu.MenuCliente;
 import src.vendedor.CadastroVendedor;
-import src.menu.MenuVendedor;
-import src.menu.MenuRelatorio;
 import src.venda.MenuVenda;
 
 public class MenuPrincipal {
@@ -21,12 +16,12 @@ public class MenuPrincipal {
         Catalogo catalogo = new Catalogo();
         catalogo.cadastrarProdutosIniciais();
 
-        MenuProduto menuProduto = new MenuProduto(catalogo);
+        MenuProduto menuProduto = new MenuProduto(catalogo, entrada);
 
         Estoque estoque = new Estoque();
 
         CadastroCliente cadastroCliente = new CadastroCliente();
-        MenuCliente menuCliente = new MenuCliente(cadastroCliente);
+        MenuCliente menuCliente = new MenuCliente(cadastroCliente, entrada);
 
         CadastroVendedor cadastroVendedor = new CadastroVendedor();
         MenuVendedor menuVendedor = new MenuVendedor(cadastroVendedor);
@@ -46,7 +41,7 @@ public class MenuPrincipal {
         estoque.cadastrarEstoque("009", 10);
         estoque.cadastrarEstoque("010", 10);
 
-        MenuEstoque menuEstoque = new MenuEstoque(estoque,catalogo);
+        MenuEstoque menuEstoque = new MenuEstoque(estoque,catalogo, entrada);
 
         int opcao = -1;
 
@@ -88,6 +83,5 @@ public class MenuPrincipal {
                 System.out.println("opção inválida!");
             }
         }
-        entrada.close();
     }
 }
