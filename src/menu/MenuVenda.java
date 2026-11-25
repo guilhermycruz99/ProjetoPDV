@@ -1,7 +1,10 @@
-package src.venda;
+package src.menu;
 
 import java.util.Scanner;
 import src.produto.Catalogo;
+import src.venda.Carrinho;
+import src.venda.Recibo;
+import src.venda.Venda;
 import src.estoque.Estoque;
 import src.cliente.CadastroCliente;
 import src.vendedor.CadastroVendedor;
@@ -13,24 +16,23 @@ public class MenuVenda {
     private CadastroCliente cadastroCliente;
     private CadastroVendedor cadastroVendedor;
     private Carrinho carrinho;
+    private Scanner entrada;
 
-    public MenuVenda(Catalogo catalogo, Estoque estoque,
-        CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor) {
-
+    public MenuVenda(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor, Scanner entrada) {
             this.catalogo = catalogo;
             this.estoque = estoque;
             this.cadastroCliente = cadastroCliente;
             this.cadastroVendedor = cadastroVendedor;
-
+            this.entrada = entrada;
             this.carrinho = new Carrinho(catalogo, estoque);
         }
 
         public  void executar() {
-            Scanner entrada = new Scanner(System.in);
+
             int opcao = -1;
 
             while (opcao != 0) {
-                System.out.println("\n===== MENU DE VENDAS=====");
+                System.out.println("\n----- MENU DE VENDAS -----");
                 System.out.println("1 - Adicinar produto");
                 System.out.println("2 - Visualizar carrinho");
                 System.out.println("3 - Finalizar venda");
@@ -77,7 +79,7 @@ public class MenuVenda {
             }
         }
         
-        private void  finalizarVenda(Scanner entrada) {
+    private void  finalizarVenda(Scanner entrada) {
 
             if (carrinho.estaVazio()){
                 System.out.println("Carrinho vazio!");
@@ -112,5 +114,5 @@ public class MenuVenda {
 
                 carrinho.limpar();
             }
-        }
+    }
 }

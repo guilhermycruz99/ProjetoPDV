@@ -13,23 +13,23 @@ public class MenuRelatorio {
     private Estoque estoque;
     private CadastroCliente cadastroCliente;
     private CadastroVendedor cadastroVendedor;
+    private Scanner entrada;
 
-    public MenuRelatorio(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor){
+    public MenuRelatorio(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor, Scanner entrada){
         this.catalogo = catalogo;
         this.estoque = estoque;
         this.cadastroCliente = cadastroCliente;
         this.cadastroVendedor = cadastroVendedor;
+        this.entrada = entrada;
     }
 
     public void executar() {
-
-        Scanner entrada = new Scanner(System.in);
 
         int opcaoRelatorio = -1;
 
         while (opcaoRelatorio != 0) {
 
-            System.out.println("\n=== MENU DE RELATÓRIOS ===");
+            System.out.println("\n----- MENU DE RELATÓRIOS -----");
             System.out.println("1 - Relatório de produtos");
             System.out.println("2 - Relatório de estoque");
             System.out.println("3 - Relatório de clientes");
@@ -40,11 +40,11 @@ public class MenuRelatorio {
             opcaoRelatorio = entrada.nextInt();
 
             if (opcaoRelatorio == 1) {
-                System.out.println("\n=== RELATÓRIO DE PRODUTOS ===");
+                System.out.println("\n----- RELATÓRIO DE PRODUTOS -----");
                 catalogo.listarProdutos();
 
             } else if (opcaoRelatorio == 2) {
-                System.out.println("\n=== RELATÓRIO DE ESTOQUE===");
+                System.out.println("\n----- RELATÓRIO DE ESTOQUE -----");
 
                 for (Produto produto : catalogo.getProdutos().values()){
 
@@ -57,11 +57,11 @@ public class MenuRelatorio {
                 }
 
             } else if (opcaoRelatorio == 3) {
-                System.out.println("\n=== RELATÓRIO DE CLIENTES===");
+                System.out.println("\n--- RELATÓRIO DE CLIENTES -----");
                 cadastroCliente.listarClientes();
 
             } else if (opcaoRelatorio == 4) {
-                System.out.println("\n=== RELATÓRIO DE VENDEDORES===");
+                System.out.println("\n----- RELATÓRIO DE VENDEDORES -----");
                 cadastroVendedor.listarVendedores();
 
             } else if (opcaoRelatorio == 0) {
@@ -69,9 +69,7 @@ public class MenuRelatorio {
 
             } else {
                 System.out.println("opção invalida!");
-            }  
-            
+            }
         }
     }
-    
 }

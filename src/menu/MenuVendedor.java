@@ -7,13 +7,14 @@ import java.util.Scanner;
 public class MenuVendedor {
 
     private CadastroVendedor cadastroVendedor;
+    private Scanner entrada; 
 
-    public MenuVendedor(CadastroVendedor cadastroVendedor){
+    public MenuVendedor(CadastroVendedor cadastroVendedor, Scanner entrada){
         this.cadastroVendedor = cadastroVendedor;
+        this.entrada = entrada;
     }
 
     public void executar() {
-        Scanner entrada = new Scanner(System.in);
 
         int opcaoVendedor = -1;
 
@@ -63,5 +64,4 @@ public class MenuVendedor {
             }
         }
     }
-    
 }

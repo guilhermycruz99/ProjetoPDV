@@ -72,8 +72,7 @@ public class Venda {
 
         
         for (ItemCarrinho item : carrinho.getItens()) {
-            estoque.baixarEstoque(item.getProduto().getCodigo(),
-                                  item.getQuantidade());
+            estoque.baixarEstoque(item.getProduto().getCodigo(), item.getQuantidade());
         }
 
         

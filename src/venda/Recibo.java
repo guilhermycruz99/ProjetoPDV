@@ -19,7 +19,7 @@ public class Recibo {
 
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-        System.out.println("\n========== RECIBO ==========");
+        System.out.println("\n------ RECIBO ------");
         System.out.println("Data: " + venda.getDataHora().format(formato));
         System.out.println("Cliente: " + venda.getCliente().getNome());
         System.out.println("Vendedor: " + venda.getVendedor().getNome());

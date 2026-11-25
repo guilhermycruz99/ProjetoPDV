@@ -6,7 +6,6 @@ import src.produto.Catalogo;
 import src.estoque.Estoque;
 import src.cliente.CadastroCliente;
 import src.vendedor.CadastroVendedor;
-import src.venda.MenuVenda;
 
 public class MenuPrincipal {
 
@@ -24,11 +23,11 @@ public class MenuPrincipal {
         MenuCliente menuCliente = new MenuCliente(cadastroCliente, entrada);
 
         CadastroVendedor cadastroVendedor = new CadastroVendedor();
-        MenuVendedor menuVendedor = new MenuVendedor(cadastroVendedor);
+        MenuVendedor menuVendedor = new MenuVendedor(cadastroVendedor, entrada);
 
-        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque, cadastroCliente, cadastroVendedor);
+        MenuRelatorio menuRelatorio = new MenuRelatorio(catalogo, estoque, cadastroCliente, cadastroVendedor, entrada);
 
-        MenuVenda menuVenda = new MenuVenda(catalogo, estoque, cadastroCliente, cadastroVendedor);
+        MenuVenda menuVenda = new MenuVenda(catalogo, estoque, cadastroCliente, cadastroVendedor, entrada);
 
         estoque.cadastrarEstoque("001", 10);
         estoque.cadastrarEstoque("002", 10);
