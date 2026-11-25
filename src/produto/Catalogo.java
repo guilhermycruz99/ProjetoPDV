@@ -1,8 +1,10 @@
+
 package src.produto;
+
 import java.util.HashMap;
 
 public class Catalogo {
-    
+
     private HashMap<String, Produto> produtos;
 
     public Catalogo() {
@@ -12,8 +14,7 @@ public class Catalogo {
     public void cadastrarProduto(Produto produto) {
 
         if (produtos.containsKey(produto.getCodigo())) {
-
-            System.out.println("Produto já cadastrado");
+            System.out.println("Produto já cadastrado!");
             return;
         }
 
@@ -25,18 +26,20 @@ public class Catalogo {
         return produtos.get(codigo);
     }
 
-    public HashMap<String,Produto> getProdutos(){
+    public HashMap<String, Produto> getProdutos() {
         return produtos;
     }
 
     public void listarProdutos() {
         System.out.println();
+
         for (Produto produto : produtos.values()) {
             System.out.println(
                 produto.getCodigo() + " - " +
-                produto.getNome() + " - R$ " + 
+                produto.getNome() + " - R$ " +
                 String.format("%.2f", produto.getPreco())
             );
+
             System.out.println();
         }
     }
@@ -44,8 +47,8 @@ public class Catalogo {
     public void cadastrarProdutosIniciais() {
         cadastrarProduto(new Produto("001", "Bug Simples", 19.00, "Hamburguer"));
         cadastrarProduto(new Produto("002", "Ctrl+Cheddar", 23.90, "Hamburguer"));
-        cadastrarProduto(new Produto("003", "Alt+Fome", 25.90 , "Hamburguer"));
-        cadastrarProduto(new Produto("004", "Stack Overflow", 29.90 , "Hambuguer"));
+        cadastrarProduto(new Produto("003", "Alt+Fome", 25.90, "Hamburguer"));
+        cadastrarProduto(new Produto("004", "Stack Overflow", 29.90, "Hambuguer"));
         cadastrarProduto(new Produto("005", "Blue Screen", 32.90, "Hamburguer"));
 
         cadastrarProduto(new Produto("006", "Batata.exe", 12.90, "Acompanhamento"));
@@ -54,5 +57,5 @@ public class Catalogo {
         cadastrarProduto(new Produto("008", "Coca-Cola 350ml", 6.00, "Bebida"));
         cadastrarProduto(new Produto("009", "Guaraná Antarctica 350ml", 5.50, "Bebida"));
         cadastrarProduto(new Produto("010", "Água mineral 500ml", 3.50, "Bebida"));
-        }
+    }
 }

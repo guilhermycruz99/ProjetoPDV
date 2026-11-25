@@ -1,3 +1,4 @@
+
 package src.menu;
 
 import src.cliente.CadastroCliente;
@@ -9,17 +10,17 @@ public class MenuCliente {
     private CadastroCliente cadastroCliente;
     private Scanner entrada;
 
-    public MenuCliente(CadastroCliente cadastroCliente, Scanner entrada){
+    public MenuCliente(CadastroCliente cadastroCliente, Scanner entrada) {
         this.cadastroCliente = cadastroCliente;
         this.entrada = entrada;
     }
 
-    public void executar(){
+    public void executar() {
 
         int opcaoCliente = -1;
 
         while (opcaoCliente != 0) {
-            System.out.println("\n----- MENU DE CLIENTE -----\n");
+            System.out.println("\n----- MENU DE CLIENTES -----\n");
             System.out.println(" 1 - Cadastrar cliente");
             System.out.println(" 2 - Buscar cliente");
             System.out.println(" 3 - Listar clientes");
@@ -34,28 +35,28 @@ public class MenuCliente {
                 System.out.print("Digite o nome do cliente: ");
                 String nome = entrada.nextLine();
 
-                System.out.print("Digite o cpf: ");
+                System.out.print("Digite o CPF: ");
                 String cpf = entrada.nextLine();
 
-                System.out.print("Digite o telefone:");
+                System.out.print("Digite o telefone: ");
                 String tel = entrada.nextLine();
 
                 Cliente cliente = new Cliente(nome, cpf, tel);
 
                 cadastroCliente.cadastrarCliente(cliente);
-                
+
             } else if (opcaoCliente == 2) {
                 entrada.nextLine();
 
-                System.out.print("Digite o cpf do cliente:");
+                System.out.print("Digite o CPF do cliente: ");
                 String cpf = entrada.nextLine();
 
                 Cliente cliente = cadastroCliente.buscarClientes(cpf);
 
-                if(cliente != null){
-                    System.out.println("cliente encontrado!");
+                if (cliente != null) {
+                    System.out.println("Cliente encontrado!");
                     System.out.println("Nome: " + cliente.getNome());
-                    System.out.println("cpf: " + cliente.getCpf());
+                    System.out.println("CPF: " + cliente.getCpf());
                     System.out.println("Telefone: " + cliente.getTel());
                 }
 
@@ -64,10 +65,10 @@ public class MenuCliente {
 
             } else if (opcaoCliente == 0) {
                 System.out.println("Voltando ao menu principal...");
-            }else {
-                System.out.println("opção invalida!");
+
+            } else {
+                System.out.println("Opção inválida!");
             }
         }
     }
-
 }

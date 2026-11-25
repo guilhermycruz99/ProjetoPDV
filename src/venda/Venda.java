@@ -30,8 +30,7 @@ public class Venda {
     private double comissao;
     private double total;
 
-    public Venda(Carrinho carrinho, Estoque estoque,
-                 Cliente cliente, Vendedor vendedor) {
+    public Venda(Carrinho carrinho, Estoque estoque, Cliente cliente, Vendedor vendedor) {
         this.carrinho = carrinho;
         this.estoque = estoque;
         this.cliente = cliente;

@@ -1,7 +1,8 @@
+
 package src.produto;
 
 public class Produto {
-    
+
     private String codigo;
     private String nome;
     private double preco;
@@ -12,7 +13,6 @@ public class Produto {
         this.nome = nome;
         this.preco = preco;
         this.categoria = categoria;
-        
     }
 
     public String getCodigo() {

@@ -1,3 +1,4 @@
+
 package src.venda;
 
 import src.produto.Produto;
@@ -23,6 +24,7 @@ public class ItemCarrinho {
     public double calcularSubtotal() {
         return produto.getPreco() * quantidade;
     }
+
     public void somarQuantidade(int qtd) {
         quantidade += qtd;
     }

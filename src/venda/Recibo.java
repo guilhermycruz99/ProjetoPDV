@@ -1,3 +1,4 @@
+
 package src.venda;
 
 import java.time.format.DateTimeFormatter;
@@ -35,11 +36,11 @@ public class Recibo {
         }
 
         System.out.println("----------------------------");
-        System.out.printf("Subtotal:             R$ %8.2f%n", venda.getSubtotal());
-        System.out.printf("Imposto (25%%):        R$ %8.2f%n", venda.getImposto());
-        System.out.printf("Comissão vendedor (5%%): R$ %8.2f%n", venda.getComissao());
+        System.out.printf("Subtotal:               R$ %8.2f%n", venda.getSubtotal());
+        System.out.printf("Imposto (25%%):          R$ %8.2f%n", venda.getImposto());
+        System.out.printf("Comissão do vendedor (5%%): R$ %8.2f%n", venda.getComissao());
         System.out.println("----------------------------");
-        System.out.printf("TOTAL A PAGAR:        R$ %8.2f%n", venda.getTotal());
+        System.out.printf("TOTAL A PAGAR:           R$ %8.2f%n", venda.getTotal());
         System.out.println("============================");
     }
 }

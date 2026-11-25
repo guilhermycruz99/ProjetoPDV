@@ -1,3 +1,4 @@
+
 package src.menu;
 
 import src.vendedor.CadastroVendedor;
@@ -7,9 +8,9 @@ import java.util.Scanner;
 public class MenuVendedor {
 
     private CadastroVendedor cadastroVendedor;
-    private Scanner entrada; 
+    private Scanner entrada;
 
-    public MenuVendedor(CadastroVendedor cadastroVendedor, Scanner entrada){
+    public MenuVendedor(CadastroVendedor cadastroVendedor, Scanner entrada) {
         this.cadastroVendedor = cadastroVendedor;
         this.entrada = entrada;
     }
@@ -19,30 +20,33 @@ public class MenuVendedor {
         int opcaoVendedor = -1;
 
         while (opcaoVendedor != 0) {
-            System.out.println("\n-----  MENU DE VENDEDORES -----\n");
+            System.out.println("\n----- MENU DE VENDEDORES -----\n");
             System.out.println(" 1 - Cadastrar vendedor");
             System.out.println(" 2 - Buscar vendedor");
             System.out.println(" 3 - Listar vendedores");
             System.out.println(" 0 - Voltar\n");
             System.out.print("Escolha uma opção: ");
-            System.out.println("----------------------------");
-            
             opcaoVendedor = entrada.nextInt();
+            System.out.println("---------------------------");
 
-            if (opcaoVendedor == 1){
+            if (opcaoVendedor == 1) {
                 entrada.nextLine();
+
                 System.out.print("Digite o nome do vendedor: ");
                 String nome = entrada.nextLine();
+
                 System.out.print("Digite o código do vendedor: ");
                 String codigo = entrada.nextLine();
+
                 System.out.print("Digite o telefone: ");
                 String telefone = entrada.nextLine();
 
                 Vendedor vendedor = new Vendedor(nome, codigo, telefone);
                 cadastroVendedor.cadastrarVendedor(vendedor);
 
-            } else if (opcaoVendedor == 2){
+            } else if (opcaoVendedor == 2) {
                 entrada.nextLine();
+
                 System.out.print("Digite o código do vendedor: ");
                 String codigo = entrada.nextLine();
 
@@ -52,15 +56,18 @@ public class MenuVendedor {
                     System.out.println("Vendedor encontrado!");
                     System.out.println("Nome: " + vendedor.getNome());
                     System.out.println("Código: " + vendedor.getCodigo());
-                    System.out.println("Telefone: " + vendedor.getTel());                    
+                    System.out.println("Telefone: " + vendedor.getTel());
                 }
-            } else if (opcaoVendedor == 3){
+
+            } else if (opcaoVendedor == 3) {
                 cadastroVendedor.listarVendedores();
                 System.out.println("\n---------------------------");
-            } else if (opcaoVendedor == 0){
+
+            } else if (opcaoVendedor == 0) {
                 System.out.println("Voltando ao menu principal...");
+
             } else {
-                System.out.println("opção inválida!");
+                System.out.println("Opção inválida!");
             }
         }
     }

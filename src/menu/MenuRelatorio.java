@@ -1,11 +1,12 @@
-package src.menu;
-import  java.util.Scanner;
-import  src.produto.Catalogo;
-import  src.produto.Produto;
-import  src.cliente.CadastroCliente;
-import  src.estoque.Estoque;
-import  src.vendedor.CadastroVendedor;
 
+package src.menu;
+
+import java.util.Scanner;
+import src.produto.Catalogo;
+import src.produto.Produto;
+import src.cliente.CadastroCliente;
+import src.estoque.Estoque;
+import src.vendedor.CadastroVendedor;
 
 public class MenuRelatorio {
 
@@ -15,7 +16,7 @@ public class MenuRelatorio {
     private CadastroVendedor cadastroVendedor;
     private Scanner entrada;
 
-    public MenuRelatorio(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor, Scanner entrada){
+    public MenuRelatorio(Catalogo catalogo, Estoque estoque, CadastroCliente cadastroCliente, CadastroVendedor cadastroVendedor, Scanner entrada) {
         this.catalogo = catalogo;
         this.estoque = estoque;
         this.cadastroCliente = cadastroCliente;
@@ -28,16 +29,15 @@ public class MenuRelatorio {
         int opcaoRelatorio = -1;
 
         while (opcaoRelatorio != 0) {
-
-            System.out.println("\n----- MENU DE RELATÓRIOS -----");
-            System.out.println("1 - Relatório de produtos");
-            System.out.println("2 - Relatório de estoque");
-            System.out.println("3 - Relatório de clientes");
-            System.out.println("4 - relatório de vendedores");
-            System.out.println("0 - voltar");
-            System.out.print("Escolha uma opção");
-
+            System.out.println("\n----- MENU DE RELATÓRIOS -----\n");
+            System.out.println(" 1 - Relatório de produtos");
+            System.out.println(" 2 - Relatório de estoque");
+            System.out.println(" 3 - Relatório de clientes");
+            System.out.println(" 4 - Relatório de vendedores");
+            System.out.println(" 0 - Voltar\n");
+            System.out.print("Escolha uma opção: ");
             opcaoRelatorio = entrada.nextInt();
+            System.out.println("------------------------------");
 
             if (opcaoRelatorio == 1) {
                 System.out.println("\n----- RELATÓRIO DE PRODUTOS -----");
@@ -46,18 +46,16 @@ public class MenuRelatorio {
             } else if (opcaoRelatorio == 2) {
                 System.out.println("\n----- RELATÓRIO DE ESTOQUE -----");
 
-                for (Produto produto : catalogo.getProdutos().values()){
+                for (Produto produto : catalogo.getProdutos().values()) {
 
                     int quantidade = estoque.consultarEstoque(produto.getCodigo());
-                    
-                    System.out.println("Produto" + produto.getNome());
-                                        
-                    System.out.println("Quantidade em estoque:" + quantidade);
 
+                    System.out.println("Produto: " + produto.getNome());
+                    System.out.println("Quantidade em estoque: " + quantidade);
                 }
 
             } else if (opcaoRelatorio == 3) {
-                System.out.println("\n--- RELATÓRIO DE CLIENTES -----");
+                System.out.println("\n----- RELATÓRIO DE CLIENTES -----");
                 cadastroCliente.listarClientes();
 
             } else if (opcaoRelatorio == 4) {
@@ -68,7 +66,7 @@ public class MenuRelatorio {
                 System.out.println("Voltando ao menu principal...");
 
             } else {
-                System.out.println("opção invalida!");
+                System.out.println("Opção inválida!");
             }
         }
     }

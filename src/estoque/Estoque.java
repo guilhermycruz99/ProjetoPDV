@@ -1,37 +1,35 @@
+
 package src.estoque;
 
 import java.util.HashMap;
 
 public class Estoque {
-    
 
-        private HashMap<String, Integer> quantidades;
+    private HashMap<String, Integer> quantidades;
 
-        public Estoque() {
-            quantidades = new HashMap<>();
-        }
+    public Estoque() {
+        quantidades = new HashMap<>();
+    }
 
     public void cadastrarEstoque(String codigo, int quantidade) {
 
         if (quantidade < 0 || quantidades.containsKey(codigo)) {
-            System.out.println("Cadastro invalido");
+            System.out.println("Cadastro inválido!");
             return;
         }
 
         quantidades.put(codigo, quantidade);
-        System.out.println("Estoque Cadastrado!");
+        System.out.println("Estoque cadastrado!");
     }
 
     public int consultarEstoque(String codigo) {
-
         return quantidades.getOrDefault(codigo, 0);
     }
-    
+
     public boolean temEstoque(String codigo, int quantidade) {
 
-        if (quantidade <= 0 ) {
+        if (quantidade <= 0) {
             return false;
-
         }
 
         return consultarEstoque(codigo) >= quantidade;
@@ -52,7 +50,7 @@ public class Estoque {
     public void adicionarEstoque(String codigo, int quantidade) {
 
         if (quantidade <= 0 || !quantidades.containsKey(codigo)) {
-            System.out.println("Operação Invalida.");
+            System.out.println("Operação inválida!");
             return;
         }
 
@@ -61,4 +59,3 @@ public class Estoque {
         quantidades.put(codigo, atual + quantidade);
     }
 }
-
